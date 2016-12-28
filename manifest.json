@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Zoom",
+    "description": "This extension let's you zoom in a video.",
+    "version": "1.0",
+    "author": "Erevald Kullolli",
+    "homepage_url": "https://errvald.github.io",
+    "icons": { 
+        "16": "icon.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png" 
+    },
+    "background": {
+        "persistent":true,
+        "page":"background.html"
+    },
+    "content_scripts": [{
+            "matches": ["https://www.youtube.com/*"],
+            "css": ["app.css"],
+            "js": ["app.js"]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "https://www.youtube.com/*"
+    ]
+}
